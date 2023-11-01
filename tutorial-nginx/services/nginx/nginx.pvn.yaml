@@ -1,6 +1,6 @@
 service:
   name: nginx
-  application: my-app # replace with the name of your app
+  application: tutorial-nginx
   kubernetesConfig:
     type: KUBERNETES
     local:

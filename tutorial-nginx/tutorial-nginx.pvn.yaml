@@ -1,5 +1,5 @@
 application:
-  name: my-app # replace with your desired app name
+  name: tutorial-nginx
   releaseChannels:
   - name: staging
     runtimes:
