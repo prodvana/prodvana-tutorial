@@ -1,0 +1,13 @@
+application:
+  name: my-app # replace with your desired app name
+  releaseChannels:
+  - name: staging
+    runtimes:
+    - runtime: my-runtime  # set to the name of the runtime you linked
+  - name: production
+    runtimes:
+    - runtime: my-runtime  # set to the name of the runtime you linked
+    preconditions:
+    - releaseChannelStable:
+        releaseChannel: staging
+    - manualApproval: {}
