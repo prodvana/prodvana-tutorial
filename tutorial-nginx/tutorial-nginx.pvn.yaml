@@ -3,11 +3,11 @@ application:
   releaseChannels:
   - name: staging
     runtimes:
-    - runtime: my-runtime  # set to the name of the runtime you linked
+    - runtime: fake-runtime  # TODO: set to the name of the runtime you linked
   - name: production
     runtimes:
-    - runtime: my-runtime  # set to the name of the runtime you linked
+    - runtime: fake-runtime  # TODO: set to the name of the runtime you linked
     preconditions:
     - releaseChannelStable:
-        releaseChannel: staging
-    - manualApproval: {}
+        releaseChannel: staging  # Deploy to production only after staging is stable
+    - manualApproval: {}  # Require manual approval to deploy to production
