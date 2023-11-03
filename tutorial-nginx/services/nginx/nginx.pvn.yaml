@@ -1,0 +1,15 @@
+service:
+  name: nginx
+  application: tutorial-nginx
+  kubernetesConfig:
+    type: KUBERNETES
+    local:
+      path: .
+  parameters:
+    - name: image
+      description: "Container image for nginx deployment"
+      dockerImage:
+        defaultTag: latest
+        imageRegistryInfo:
+          containerRegistry: dockerhub-public
+          imageRepository: library/nginx
